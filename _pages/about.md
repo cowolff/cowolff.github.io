@@ -7,7 +7,7 @@ redirect_from:
   - /about.html
 ---
 
-Welcome! I'm Cornelius Wolff, a PhD researcher at the [TRL Lab at the Centrum Wiskunde & Informatica (CWI)](https://trl-lab.github.io/") and the University of Amsterdam, under the supervision of Madelon Hulsebos and Maarten de Rijke. My work centers on **Insight Retrieval from Structured Data**, in which I investigate AI models and pipeline that can deal with all kinds of structured data like databases, csv files etc. I'm furthermore deeply interested in **AI in education**. **In-Context Learning** and **efficient machine learning**.
+Welcome! I'm Cornelius Wolff, a PhD researcher at the [TRL Lab at the Centrum Wiskunde & Informatica (CWI)](https://trl-lab.github.io/") and the University of Amsterdam, under the supervision of Madelon Hulsebos and Maarten de Rijke. My work centers on **Insight Retrieval from Structured Data**, in which I investigate AI models and pipelines that can deal with all kinds of structured data like databases, csv files etc. I'm furthermore deeply interested in **AI in education**. **In-Context Learning** and **efficient machine learning**.
 
 ### Research Interests
 - Insight extraction from structured/tabular data  
