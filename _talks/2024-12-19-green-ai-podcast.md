@@ -5,7 +5,7 @@ type: "Podcast Interview"
 permalink: /talks/2024-12-19-green-ai-podcast
 venue: "Kaleidoscience: Conversations on Cognitive Science"
 date: 2024-12-19
-location: "Online"
+location: "Osnabrück, Germany"
 ---
 
 [Podcast Episode](https://open.spotify.com/episode/4VStCOSuXf5i7MHxJzIBbQ?si=63c67fa17a034ac0)
