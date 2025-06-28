@@ -16,7 +16,7 @@ Welcome! I'm Cornelius Wolff, a PhD researcher at the [TRL Lab at the Centrum Wi
 - AI for education and learning personalization
 
 ### Education
-- **PhD in Computer Science**, CWI & University of Amsterdam (2025–present)  
+- **PhD in Maschine Learning**, CWI & University of Amsterdam (2025–present)  
 - **M.Sc. in Cognitive Science**, Osnabrück University (2021–2025, Overall Grade: 1.0, Thesis: 1.0)  
 - **B.Sc. in Information Systems**, Osnabrück University (2018–2021, Overall Grade: 2.1, Thesis: 1.0)
 
