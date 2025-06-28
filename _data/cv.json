@@ -33,31 +33,29 @@
   "work": [],
   "education": [
     {
-      "institution": "GitHub University",
-      "area": "Ph.D in Version Control Theory",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2018",
-      "gpa": null,
-      "courses": []
+      "institution": "Osnabrück University",
+      "area": "M.Sc. in Cognitive Science",
+      "studyType": "Master of Science",
+      "startDate": "2021-10",
+      "endDate": "2025-03",
+      "gpa": "1.0",
+      "courses": [
+        "Focused on ML, Computational Neuroscience and ethics of AI",
+        "Started the two Study Projects \"AI for Science\" and \"Emergent Behaviour in Multi-Agent-Systems\"",
+        "Part of the master application selection committee from 2023 to 2025",
+        "Master thesis: Emergence of language in situated environments (Grade: 1.0)"
+      ]
     },
     {
-      "institution": "GitHub University",
-      "area": "M.S. in Jekyll",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2014",
-      "gpa": null,
-      "courses": []
-    },
-    {
-      "institution": "GitHub University",
-      "area": "B.S. in GitHub",
-      "studyType": "",
-      "startDate": "",
-      "endDate": "2012",
-      "gpa": null,
-      "courses": []
+      "institution": "Osnabrück University",
+      "area": "B.Sc. in Information Systems",
+      "studyType": "Bachelor of Science",
+      "startDate": "2018-10",
+      "endDate": "2021-10",
+      "gpa": "2.1",
+      "courses": [
+        "Bachelor thesis \"Conception and implementation of a simulation environment for analyzing the spread of Sars-CoV-2 at events events with machine learning agents\" graded with the best possible grade of 1.0"
+      ]
     }
   ],
   "skills": [],
