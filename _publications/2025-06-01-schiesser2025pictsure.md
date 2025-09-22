@@ -11,3 +11,5 @@ citation: 'Schiesser, L., Wolff, C., Haas, S., & Pukrop, S. (2025). &quot;PictSu
 ---
 
 This paper introduces PictSure, a framework that demonstrates the critical importance of pretraining embeddings for in-context learning image classifiers. We show how proper embedding pretraining can significantly improve the performance and generalization capabilities of these models. 
+
+The project page is available [here](https://pictsure.github.io).
