@@ -27,9 +27,9 @@ Welcome! I'm Cornelius Wolff, a PhD researcher at the [TRL Lab at the Centrum Wi
 - **From Pixels to Actions** – Visual feature extraction in RL environments  
 
 ### Selected Publications
-- *How well do LLMs reason over tabular data, really?* (ACL TableRep Workshop 2025)  
+- *How well do LLMs reason over tabular data, really?* (ACL TRL Workshop 2025)  
 - *GRASP: Benchmark for Multimodal Language Models* (IJCAI 2024)  
-- *PictSure: Pretraining Embeddings Matters for In-Context Learning Image Classifiers* (arXiv 2025)  
+- *PictSure: Pretraining Embeddings Matters for In-Context Learning Image Classifiers* (Preprint)  
 - [See full publication list →](/publications/)
 
 ### Technical Skills
