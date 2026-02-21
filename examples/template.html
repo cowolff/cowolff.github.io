@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fred Scienceman - Academic Portfolio</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: '#1f2a44',
+        sage: '#0f766e',
+        'sage-light': '#5eead4',
+        'sage-dark': '#115e59',
+      },
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 240px);
+  }
+  section { scroll-margin-top: 88px; }
+  .section-icon {
+    background: #ffffff;
+    border: 1px solid #dbe4ee;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  }
+  .nav-dot { width: 8px; height: 8px; background: #7a9e87; border-radius: 50%; display: inline-block; margin-right: 4px; }
+  .research-card {
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .research-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 32px rgba(15, 23, 42, 0.1);
+  }
+  .research-card:hover .arrow-btn { background: #115e59; }
+  .tab-btn.active {
+    border-bottom: 2px solid #0f766e;
+    color: #1f2a44;
+    font-weight: 700;
+    background: #f0fdfa;
+  }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+  .node-bg {
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(15, 118, 110, 0.08) 0%, transparent 38%),
+      radial-gradient(circle at 80% 10%, rgba(59, 130, 246, 0.08) 0%, transparent 40%);
+  }
+  .quote-card {
+    background: linear-gradient(135deg, #1d4ed8 0%, #0f766e 100%);
+  }
+</style>
+</head>
+<body class="text-slate-700">
+
+<!-- Sticky Side Nav -->
+<nav class="fixed left-8 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-3 text-[11px] text-slate-500">
+  <a href="#about" class="rounded-full border border-slate-200 bg-white/90 px-3 py-2 hover:text-navy hover:border-sage transition-colors"><span class="text-sage mr-1">01.</span> ABOUT</a>
+  <a href="#education" class="rounded-full border border-slate-200 bg-white/90 px-3 py-2 hover:text-navy hover:border-sage transition-colors"><span class="text-sage mr-1">02.</span> EDUCATION</a>
+  <a href="#research" class="rounded-full border border-slate-200 bg-white/90 px-3 py-2 hover:text-navy hover:border-sage transition-colors"><span class="text-sage mr-1">03.</span> RESEARCH</a>
+  <a href="#publications" class="rounded-full border border-slate-200 bg-white/90 px-3 py-2 hover:text-navy hover:border-sage transition-colors"><span class="text-sage mr-1">04.</span> PUBLICATIONS</a>
+  <a href="#teaching" class="rounded-full border border-slate-200 bg-white/90 px-3 py-2 hover:text-navy hover:border-sage transition-colors"><span class="text-sage mr-1">05.</span> TEACHING</a>
+  <a href="#contact" class="rounded-full border border-slate-200 bg-white/90 px-3 py-2 hover:text-navy hover:border-sage transition-colors"><span class="text-sage mr-1">06.</span> CONTACTS</a>
+</nav>
+
+<!-- Top Nav -->
+<header class="sticky top-0 z-40 bg-white/85 backdrop-blur border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center text-[11px] text-slate-500 font-semibold tracking-[0.2em]">
+    <a href="#about" class="hover:text-navy"><span class="text-sage mr-1">01_</span>ABOUT</a>
+    <a href="#education" class="hover:text-navy"><span class="text-sage mr-1">02_</span>EDUCATION</a>
+    <a href="#research" class="hover:text-navy"><span class="text-sage mr-1">03_</span>RESEARCH</a>
+    <a href="#publications" class="hover:text-navy"><span class="text-sage mr-1">04_</span>PUBLICATIONS</a>
+    <a href="#teaching" class="hover:text-navy"><span class="text-sage mr-1">05_</span>TEACHING</a>
+    <a href="#contact" class="hover:text-navy"><span class="text-sage mr-1">06_</span>CONTACTS</a>
+    <button class="text-gray-300 hover:text-sage">&#9776;</button>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="node-bg py-20">
+  <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-10 items-center">
+    <div class="w-full md:w-2/5">
+      <div class="bg-slate-300 w-full aspect-[4/5] max-w-sm rounded-3xl shadow-xl shadow-slate-300/40"></div>
+    </div>
+    <div class="w-full md:w-3/5 bg-white/90 border border-slate-200 rounded-3xl p-8 shadow-lg shadow-slate-200/70">
+      <h1 class="text-5xl md:text-6xl font-bold text-navy mb-2 leading-tight">Fred Scienceman</h1>
+      <p class="text-xs tracking-[0.25em] text-slate-400 mb-4">ASSOCIATED PROFESSOR, DOCTOR OF BIOLOGY</p>
+      <div class="flex gap-2 mb-6">
+        <a href="#" class="w-8 h-8 bg-sage text-white flex items-center justify-center rounded text-xs hover:bg-sage-dark"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="w-8 h-8 bg-sage text-white flex items-center justify-center rounded text-xs hover:bg-sage-dark"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="w-8 h-8 bg-sage text-white flex items-center justify-center rounded text-xs hover:bg-sage-dark"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p class="text-sm leading-relaxed mb-6 text-slate-600">Hello!<br><br>
+        I'm Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo quat. Duis aute irure! Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </p>
+      <a href="#" class="inline-flex items-center rounded-full bg-sage px-5 py-2 text-xs tracking-[0.2em] text-white hover:bg-sage-dark">DOWNLOAD CV</a>
+      <div class="mt-8 rounded-2xl bg-slate-50 border border-slate-200 p-5">
+        <h3 class="text-navy font-bold text-lg mb-3">Latest publications:</h3>
+        <p class="text-sm text-slate-600 mb-2">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p class="text-sm text-slate-600">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="bg-slate-50 py-20">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="flex items-center gap-4 mb-16">
+      <div class="section-icon w-16 h-16 flex items-center justify-center rounded-full text-sage text-2xl">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+      <h2 class="text-4xl font-bold text-navy">Education.</h2>
+    </div>
+    <div class="flex flex-col md:flex-row gap-12">
+      <div class="w-full md:w-1/2">
+        <div class="relative pl-8 border-l-2 border-slate-300 space-y-10">
+          <div class="relative">
+            <div class="absolute -left-[21px] top-1 w-4 h-4 rounded-full bg-sage border-2 border-white shadow"></div>
+            <span class="text-xs text-gray-400 block mb-1">2002-2007</span>
+            <h4 class="font-bold text-navy text-sm">Chemical Engineering Department, National Technological University of Roma, Italy</h4>
+            <p class="text-sm text-gray-500 mt-2 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-[21px] top-1 w-4 h-4 rounded-full bg-sage border-2 border-white shadow"></div>
+            <span class="text-xs text-gray-400 block mb-1">2007-2009</span>
+            <h4 class="font-bold text-navy text-sm">Chemical Engineering Department, National Technological University of Roma, Italy</h4>
+            <p class="text-sm text-gray-500 mt-2 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+          </div>
+          <div class="relative">
+            <div class="absolute -left-[21px] top-1 w-4 h-4 rounded-full bg-sage border-2 border-white shadow"></div>
+            <span class="text-xs text-gray-400 block mb-1">2008-2014</span>
+            <h4 class="font-bold text-navy text-sm">Chemical Engineering Department, National Technological University of Roma, Italy</h4>
+            <p class="text-sm text-gray-500 mt-2 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full md:w-1/2">
+        <div class="bg-slate-300 w-full h-80 rounded-3xl shadow-lg shadow-slate-300/50"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research" class="bg-white py-24">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="flex items-center gap-4 mb-12">
+      <div class="section-icon w-16 h-16 flex items-center justify-center rounded text-sage text-2xl">
+        <i class="fas fa-flask"></i>
+      </div>
+      <h2 class="text-4xl font-bold text-navy">Research.</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <!-- Row 1 -->
+      <div class="research-card bg-white p-8 flex flex-col items-center text-center relative group">
+        <i class="fas fa-dna text-4xl text-sage-light mb-4"></i>
+        <h4 class="font-bold text-navy mb-2">Molecular Food Research</h4>
+        <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="arrow-btn absolute bottom-0 right-0 w-10 h-10 bg-sage flex items-center justify-center text-white transition-colors">
+          <i class="fas fa-chevron-right text-xs"></i>
+        </div>
+      </div>
+      <div class="research-card bg-white p-8 flex flex-col items-center text-center relative group">
+        <i class="fas fa-vial text-4xl text-sage-light mb-4"></i>
+        <h4 class="font-bold text-navy mb-2">Chemical Substance</h4>
+        <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="arrow-btn absolute bottom-0 right-0 w-10 h-10 bg-sage flex items-center justify-center text-white transition-colors">
+          <i class="fas fa-chevron-right text-xs"></i>
+        </div>
+      </div>
+      <div class="research-card bg-white p-8 flex flex-col items-center text-center relative group">
+        <i class="fas fa-globe text-4xl text-sage-light mb-4"></i>
+        <h4 class="font-bold text-navy mb-2">Ecology Problems</h4>
+        <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="arrow-btn absolute bottom-0 right-0 w-10 h-10 bg-sage flex items-center justify-center text-white transition-colors">
+          <i class="fas fa-chevron-right text-xs"></i>
+        </div>
+      </div>
+      <!-- Row 2 -->
+      <div class="research-card bg-white p-8 flex flex-col items-center text-center relative group">
+        <i class="fas fa-hourglass-half text-4xl text-sage-light mb-4"></i>
+        <h4 class="font-bold text-navy mb-2">Time Management</h4>
+        <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="arrow-btn absolute bottom-0 right-0 w-10 h-10 bg-sage flex items-center justify-center text-white transition-colors">
+          <i class="fas fa-chevron-right text-xs"></i>
+        </div>
+      </div>
+      <div class="quote-card rounded-[20px] p-8 flex items-center justify-center text-center shadow-lg shadow-cyan-900/20">
+        <p class="text-white italic font-medium leading-relaxed text-sm">
+          "I am really interested in social research such as psychological experiments, behavioral principles and interpersonal relations."
+        </p>
+      </div>
+      <div class="research-card bg-white p-8 flex flex-col items-center text-center relative group">
+        <i class="fas fa-brain text-4xl text-sage-light mb-4"></i>
+        <h4 class="font-bold text-navy mb-2">Biological Research</h4>
+        <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="arrow-btn absolute bottom-0 right-0 w-10 h-10 bg-sage flex items-center justify-center text-white transition-colors">
+          <i class="fas fa-chevron-right text-xs"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications" class="bg-slate-50 py-24">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="flex items-center gap-4 mb-12">
+      <div class="section-icon w-16 h-16 flex items-center justify-center rounded-full text-sage text-2xl">
+        <i class="fas fa-flask"></i>
+      </div>
+      <h2 class="text-4xl font-bold text-navy">Publications.</h2>
+    </div>
+    <div class="space-y-4">
+      <div class="border border-slate-200 bg-white rounded-2xl p-6 flex gap-6 hover:shadow-lg transition-shadow">
+        <div class="bg-slate-300 rounded-xl w-28 h-24 flex-shrink-0"></div>
+        <div>
+          <h4 class="font-bold text-navy mb-1">How can we prevent a glaciers melting?</h4>
+          <p class="text-xs text-gray-400 italic mb-2">Ecology & Safety, Volume 10, 2016</p>
+          <p class="text-sm text-gray-500 leading-relaxed mb-3">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <a href="#" class="text-xs text-sage tracking-widest hover:text-sage-dark">READ THE ARTICLE &#8599;</a>
+        </div>
+      </div>
+      <div class="border border-slate-200 bg-white rounded-2xl p-6 flex gap-6 hover:shadow-lg transition-shadow">
+        <div class="bg-slate-300 rounded-xl w-28 h-24 flex-shrink-0"></div>
+        <div>
+          <h4 class="font-bold text-navy mb-1">Global warming: how to prevent a catastrophe. Arguments and conclusions.</h4>
+          <p class="text-xs text-gray-400 italic mb-2">Ecology & Safety, Volume 10, 2016</p>
+          <p class="text-sm text-gray-500 leading-relaxed mb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+          <a href="#" class="text-xs text-sage tracking-widest hover:text-sage-dark">READ THE ARTICLE &#8599;</a>
+        </div>
+      </div>
+      <div class="border border-slate-200 bg-white rounded-2xl p-6 flex gap-6 hover:shadow-lg transition-shadow">
+        <div class="bg-slate-300 rounded-xl w-28 h-24 flex-shrink-0"></div>
+        <div>
+          <h4 class="font-bold text-navy mb-1">Biodiversity conservation strategies in modern ecosystems.</h4>
+          <p class="text-xs text-gray-400 italic mb-2">Nature & Science, Volume 8, 2015</p>
+          <p class="text-sm text-gray-500 leading-relaxed mb-3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+          <a href="#" class="text-xs text-sage tracking-widest hover:text-sage-dark">READ THE ARTICLE &#8599;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHING -->
+<section id="teaching" class="bg-white py-24">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="flex items-center gap-4 mb-10">
+      <div class="section-icon w-16 h-16 flex items-center justify-center rounded-full text-sage text-2xl">
+        <i class="fas fa-book"></i>
+      </div>
+      <h2 class="text-4xl font-bold text-navy">Teaching.</h2>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex gap-1 border-b border-slate-200 mb-10">
+      <button onclick="switchTab('undergrad')" id="tab-undergrad" class="tab-btn active px-8 py-3 text-sm text-gray-500 hover:text-navy transition-colors">Undergraduate courses</button>
+      <button onclick="switchTab('phd')" id="tab-phd" class="tab-btn px-8 py-3 text-sm text-gray-500 hover:text-navy transition-colors border-b-2 border-transparent">PhD seminars</button>
+      <button onclick="switchTab('summer')" id="tab-summer" class="tab-btn px-8 py-3 text-sm text-gray-500 hover:text-navy transition-colors border-b-2 border-transparent">Summer Courses</button>
+    </div>
+
+    <div id="content-undergrad" class="tab-content active space-y-8">
+      <div class="flex gap-4">
+        <div class="w-4 h-4 bg-sage-light flex-shrink-0 mt-1"></div>
+        <div>
+          <h4 class="font-bold text-navy text-sm mb-1">Course of Upper level seminar: Experiments in Political Science and Political Economy (Seminario de Titulación)</h4>
+          <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="w-4 h-4 bg-sage-light flex-shrink-0 mt-1"></div>
+        <div>
+          <h4 class="font-bold text-navy text-sm mb-1">Course of Upper level seminar: Experiments in Political Economy (Seminario de Titulación)</h4>
+          <p class="text-sm text-gray-500 leading-relaxed">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="w-4 h-4 bg-sage-light flex-shrink-0 mt-1"></div>
+        <div>
+          <h4 class="font-bold text-navy text-sm mb-1">Course of Upper level seminar: Experiments in Political Science and Political Economy (Seminario de Titulación)</h4>
+          <p class="text-sm text-gray-500 leading-relaxed">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="w-4 h-4 bg-sage-light flex-shrink-0 mt-1"></div>
+        <div>
+          <h4 class="font-bold text-navy text-sm mb-1">Course of Upper level seminar: Development (PLSC 44612)</h4>
+          <p class="text-sm text-gray-500 leading-relaxed">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="content-phd" class="tab-content space-y-8">
+      <div class="flex gap-4">
+        <div class="w-4 h-4 bg-sage-light flex-shrink-0 mt-1"></div>
+        <div>
+          <h4 class="font-bold text-navy text-sm mb-1">Advanced Research Methods in Biological Sciences</h4>
+          <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="w-4 h-4 bg-sage-light flex-shrink-0 mt-1"></div>
+        <div>
+          <h4 class="font-bold text-navy text-sm mb-1">Experimental Design and Statistical Analysis</h4>
+          <p class="text-sm text-gray-500 leading-relaxed">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="content-summer" class="tab-content space-y-8">
+      <div class="flex gap-4">
+        <div class="w-4 h-4 bg-sage-light flex-shrink-0 mt-1"></div>
+        <div>
+          <h4 class="font-bold text-navy text-sm mb-1">Summer Intensive: Ecology and Environmental Policy</h4>
+          <p class="text-sm text-gray-500 leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-gradient-to-b from-slate-50 to-white py-24">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="flex items-center gap-4 mb-12">
+      <div class="text-sage text-3xl"><i class="fas fa-map-marker-alt"></i></div>
+      <h2 class="text-4xl font-bold text-navy">Contact.</h2>
+    </div>
+    <div class="flex flex-col md:flex-row gap-16">
+      <div class="w-full md:w-2/5">
+        <p class="font-semibold text-navy mb-2">mailme@gmail.com</p>
+        <p class="font-semibold text-navy mb-2">skype: simpson</p>
+        <p class="font-semibold text-navy mb-4">8-852-345-21-00</p>
+        <div class="flex gap-2 mb-6">
+          <a href="#" class="w-8 h-8 bg-sage text-white flex items-center justify-center rounded text-xs hover:bg-sage-dark"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="w-8 h-8 bg-sage text-white flex items-center justify-center rounded text-xs hover:bg-sage-dark"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="w-8 h-8 bg-sage text-white flex items-center justify-center rounded text-xs hover:bg-sage-dark"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="text-sm text-gray-500 leading-loose">
+          Control Systems Lab,<br>
+          Building W,<br>
+          Chemical Engineering Department,<br>
+          National Technological University of Roma
+        </p>
+      </div>
+      <div class="w-full md:w-3/5 space-y-4">
+        <div>
+          <label class="text-sm font-semibold text-navy block mb-1">Your name</label>
+          <input type="text" placeholder="Mary Jane, for example" class="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-sage">
+        </div>
+        <div>
+          <label class="text-sm font-semibold text-navy block mb-1">Your e-mail</label>
+          <input type="email" placeholder="yourmail@mail.com" class="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-sage">
+        </div>
+        <div>
+          <label class="text-sm font-semibold text-navy block mb-1">Message text</label>
+          <textarea rows="5" placeholder="Write here your question or interesting offer" class="w-full border border-gray-300 px-4 py-3 text-sm focus:outline-none focus:border-sage resize-none"></textarea>
+        </div>
+        <div class="flex justify-end">
+          <button class="bg-sage text-white text-xs tracking-widest px-8 py-3 hover:bg-sage-dark transition-colors">SEND A MESSAGE</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+function switchTab(tab) {
+  ['undergrad','phd','summer'].forEach(t => {
+    document.getElementById('tab-'+t).classList.remove('active');
+    document.getElementById('content-'+t).classList.remove('active');
+  });
+  document.getElementById('tab-'+tab).classList.add('active');
+  document.getElementById('content-'+tab).classList.add('active');
+}
+</script>
+</body>
+</html>

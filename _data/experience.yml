@@ -1,0 +1,21 @@
+# Work experience entries – displayed in the Education section sidebar.
+# Fields:
+#   title:       Job title
+#   employer:    Organisation / lab name
+#   period:      Date range (e.g. "Mar 2025 – Present")
+
+- title: "PhD Student"
+  employer: "CWI & University of Amsterdam"
+  period: "Mar 2025 – Present"
+
+- title: "Junior Researcher"
+  employer: "German Research Center for AI (DFKI), Osnabrück"
+  period: "Mar 2022 – Mar 2025"
+
+- title: "Research Assistant"
+  employer: "Elia Bruni's Lab, Osnabrück University"
+  period: "Apr 2023 – Mar 2025"
+
+- title: "Research Assistant"
+  employer: "Distributed Systems Lab, Osnabrück University"
+  period: "Jun 2021 – Mar 2023"

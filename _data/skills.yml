@@ -1,0 +1,14 @@
+# Technical skill tags – displayed as pill badges in the Education section sidebar.
+# Each entry is a plain string label.
+
+- Python
+- PyTorch
+- TensorFlow
+- SQL
+- TypeScript
+- LLMs
+- RAG
+- Reinforcement Learning
+- Vector Databases
+- Git
+- LaTeX

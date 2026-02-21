@@ -1,0 +1,17 @@
+# Research area cards – displayed in a 3-column grid on the homepage.
+# Fields:
+#   icon:        Font Awesome 6 class(es) for the card icon (e.g. "fas fa-database")
+#   title:       Short title shown on the card
+#   description: One- or two-sentence description (plain text)
+
+- icon: "fas fa-database"
+  title: "Insight Retrieval from Structured Data"
+  description: "Investigating AI models and pipelines that extract meaningful insights from structured data sources such as databases, CSV files, and tabular datasets."
+
+- icon: "fas fa-brain"
+  title: "Small & Interpretable Language Models"
+  description: "Developing compact, interpretable language models that achieve high performance while remaining transparent and computationally efficient."
+
+- icon: "fas fa-lightbulb"
+  title: "In-Context Learning & Reinforcement Learning"
+  description: "Applying ICL principles to image classification, tabular data, and other structured domains; studying emergent communication in multi-agent RL systems and situated environments."

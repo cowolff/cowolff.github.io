@@ -1,0 +1,26 @@
+# Education entries – displayed in reverse-chronological order on the homepage.
+# Fields:
+#   period:      Date range shown above the entry (e.g. "2021 – 2025")
+#   degree:      Degree title
+#   institution: University / research centre name
+#   grade:       Optional GPA / grade string (omit if not applicable)
+#   details:     Optional free-text description (plain text, markdown-style ok)
+#   thesis:      Optional thesis title and grade (plain text)
+
+- period: "2025 – Present"
+  degree: "Ph.D. in Computer Science"
+  institution: "Centrum Wiskunde & Informatica & University of Amsterdam"
+  details: "Research focus: Insight Retrieval from Structured Data. Supervised by Madelon Hulsebos and Maarten de Rijke at the TRL Lab."
+
+- period: "2021 – 2025"
+  degree: "M.Sc. in Cognitive Science"
+  institution: "Osnabrück University, Germany"
+  grade: "GPA: 1.0 (A+)"
+  details: "Focus: Machine Learning, Computational Neuroscience, Ethics of AI."
+  thesis: "Emergence of language in situated environments (Grade: 1.0)"
+
+- period: "2018 – 2021"
+  degree: "B.Sc. in Information Systems"
+  institution: "Osnabrück University, Germany"
+  grade: "GPA: 2.1"
+  thesis: "Simulation environment for analyzing the spread of SARS-CoV-2 using ML agents (Grade: 1.0)"

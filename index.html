@@ -1,0 +1,471 @@
+---
+layout: null
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cornelius Wolff - Academic Portfolio</title>
+<meta name="description" content="PhD Researcher at CWI &amp; University of Amsterdam, working on Insight Retrieval from Structured Data.">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        navy: '#1f2a44',
+        sage: '#0f766e',
+        'sage-light': '#5eead4',
+        'sage-dark': '#115e59',
+      },
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 240px);
+  }
+  section { scroll-margin-top: 88px; }
+  .section-icon {
+    background: #ffffff;
+    border: 1px solid #dbe4ee;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+  }
+  .research-card {
+    border-radius: 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .research-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 32px rgba(15, 23, 42, 0.1);
+  }
+  .research-card:hover .arrow-btn { background: #115e59; }
+  .tab-btn.active {
+    border-bottom: 2px solid #0f766e;
+    color: #1f2a44;
+    font-weight: 700;
+    background: #f0fdfa;
+  }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+  .node-bg {
+    background-image:
+      radial-gradient(circle at 20% 20%, rgba(15, 118, 110, 0.08) 0%, transparent 38%),
+      radial-gradient(circle at 80% 10%, rgba(59, 130, 246, 0.08) 0%, transparent 40%);
+  }
+  .quote-card {
+    background: linear-gradient(135deg, #1d4ed8 0%, #0f766e 100%);
+  }
+</style>
+</head>
+<body class="text-slate-700">
+
+<!-- Sticky Side Nav -->
+<nav class="fixed left-8 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col gap-3 text-[11px] text-slate-500">
+  <a href="#about" class="rounded-full border border-slate-200 bg-white/90 px-3 py-2 hover:text-navy hover:border-sage transition-colors"><span class="text-sage mr-1">01.</span> ABOUT</a>
+  <a href="#education" class="rounded-full border border-slate-200 bg-white/90 px-3 py-2 hover:text-navy hover:border-sage transition-colors"><span class="text-sage mr-1">02.</span> EDUCATION</a>
+  <a href="#research" class="rounded-full border border-slate-200 bg-white/90 px-3 py-2 hover:text-navy hover:border-sage transition-colors"><span class="text-sage mr-1">03.</span> RESEARCH</a>
+  <a href="#publications" class="rounded-full border border-slate-200 bg-white/90 px-3 py-2 hover:text-navy hover:border-sage transition-colors"><span class="text-sage mr-1">04.</span> PUBLICATIONS</a>
+  <a href="#teaching" class="rounded-full border border-slate-200 bg-white/90 px-3 py-2 hover:text-navy hover:border-sage transition-colors"><span class="text-sage mr-1">05.</span> TEACHING</a>
+  <a href="#contact" class="rounded-full border border-slate-200 bg-white/90 px-3 py-2 hover:text-navy hover:border-sage transition-colors"><span class="text-sage mr-1">06.</span> CONTACT</a>
+</nav>
+
+<!-- Top Nav -->
+<header class="sticky top-0 z-40 bg-white/85 backdrop-blur border-b border-slate-200">
+  <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center text-[11px] text-slate-500 font-semibold tracking-[0.2em]">
+    <a href="#about" class="hover:text-navy"><span class="text-sage mr-1">01_</span>ABOUT</a>
+    <a href="#education" class="hover:text-navy"><span class="text-sage mr-1">02_</span>EDUCATION</a>
+    <a href="#research" class="hover:text-navy"><span class="text-sage mr-1">03_</span>RESEARCH</a>
+    <a href="#publications" class="hover:text-navy"><span class="text-sage mr-1">04_</span>PUBLICATIONS</a>
+    <a href="#teaching" class="hover:text-navy"><span class="text-sage mr-1">05_</span>TEACHING</a>
+    <a href="#contact" class="hover:text-navy"><span class="text-sage mr-1">06_</span>CONTACT</a>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="node-bg py-20">
+  <div class="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-10 items-center">
+    <div class="w-full md:w-2/5">
+      <img src="images/DSCF8580.jpg" alt="Cornelius Wolff" class="w-full max-w-sm rounded-3xl shadow-xl shadow-slate-300/40 object-cover aspect-[4/5]">
+    </div>
+    <div class="w-full md:w-3/5 bg-white/90 border border-slate-200 rounded-3xl p-8 shadow-lg shadow-slate-200/70">
+      <h1 class="text-5xl md:text-6xl font-bold text-navy mb-2 leading-tight">Cornelius Wolff</h1>
+      <p class="text-xs tracking-[0.25em] text-slate-400 mb-4">PHD RESEARCHER &middot; INSIGHT RETRIEVAL FROM STRUCTURED DATA</p>
+      <div class="flex gap-2 mb-6">
+        <a href="https://www.linkedin.com/in/co-wolff" target="_blank" rel="noopener" class="w-8 h-8 bg-sage text-white flex items-center justify-center rounded text-xs hover:bg-sage-dark" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/cowolff" target="_blank" rel="noopener" class="w-8 h-8 bg-sage text-white flex items-center justify-center rounded text-xs hover:bg-sage-dark" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://scholar.google.com/citations?user=Y8xr0JgAAAAJ" target="_blank" rel="noopener" class="w-8 h-8 bg-sage text-white flex items-center justify-center rounded text-xs hover:bg-sage-dark" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://bsky.app/profile/cowolff.bsky.social" target="_blank" rel="noopener" class="w-8 h-8 bg-sage text-white flex items-center justify-center rounded text-xs hover:bg-sage-dark font-bold" title="Bluesky" style="font-size:10px;">BSky</a>
+        <a href="https://www.researchgate.net/profile/Cornelius-Wolff?ev=hdr_xprf" target="_blank" rel="noopener" class="w-8 h-8 bg-sage text-white flex items-center justify-center rounded text-xs hover:bg-sage-dark" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+        <a href="mailto:cornelius.wolff@cwi.nl" class="w-8 h-8 bg-sage text-white flex items-center justify-center rounded text-xs hover:bg-sage-dark" title="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p class="text-sm leading-relaxed mb-6 text-slate-600">
+        Hello! I'm Cornelius Wolff, a PhD researcher at the <a href="https://trl-lab.github.io/" target="_blank" rel="noopener" class="text-sage hover:text-sage-dark underline">TRL Lab at the Centrum Wiskunde &amp; Informatica (CWI)</a> and the University of Amsterdam, under the supervision of Madelon Hulsebos and Maarten de Rijke. My work centers on <strong>Insight Retrieval from Structured Data</strong>, where I investigate AI models and pipelines that can deal with all kinds of structured data like databases and CSV files. I'm furthermore deeply interested in <strong>AI in education</strong>, <strong>In-Context Learning</strong>, and <strong>efficient machine learning</strong>.
+      </p>
+      <div class="mt-8 rounded-2xl bg-slate-50 border border-slate-200 p-5">
+        <h3 class="text-navy font-bold text-lg mb-3">Latest publications:</h3>
+        <p class="text-sm text-slate-600 mb-2"><a href="https://openreview.net/pdf?id=6PsKDjgoEy" target="_blank" rel="noopener" class="hover:text-sage transition-colors"><strong>SQALE:</strong> A Large Text-to-SQL Corpus Grounded in Real Schemas</a> &mdash; <em>AI for Tabular Data Workshop @ NeurIPS 2025</em></p>
+        <p class="text-sm text-slate-600 mb-2"><a href="https://openreview.net/pdf?id=Mm1CGvmm9Z" target="_blank" rel="noopener" class="hover:text-sage transition-colors"><strong>Are We Asking the Right Questions?</strong> On Ambiguity in Natural Language Queries for Tabular Data Analysis</a> &mdash; <em>AI for Tabular Data Workshop @ NeurIPS 2025</em></p>
+        <p class="text-sm text-slate-600"><a href="https://arxiv.org/pdf/2505.07453" target="_blank" rel="noopener" class="hover:text-sage transition-colors"><strong>How well do LLMs reason over tabular data, really?</strong></a> &mdash; <em>4th Table Representation Workshop, ACL 2025</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="bg-slate-50 py-20">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="flex items-center gap-4 mb-16">
+      <div class="section-icon w-16 h-16 flex items-center justify-center rounded-full text-sage text-2xl">
+        <i class="fas fa-graduation-cap"></i>
+      </div>
+      <h2 class="text-4xl font-bold text-navy">Education.</h2>
+    </div>
+    <div class="flex flex-col md:flex-row gap-12">
+      <div class="w-full md:w-1/2">
+        <div class="relative pl-8 border-l-2 border-slate-300 space-y-10">
+          {% for entry in site.data.education %}
+          <div class="relative">
+            <div class="absolute -left-[21px] top-1 w-4 h-4 rounded-full bg-sage border-2 border-white shadow"></div>
+            <span class="text-xs text-gray-400 block mb-1">{{ entry.period }}</span>
+            <h4 class="font-bold text-navy text-sm">{{ entry.degree }}</h4>
+            <p class="text-xs text-gray-500 font-semibold mb-1">{{ entry.institution }}{% if entry.grade %} &mdash; {{ entry.grade }}{% endif %}</p>
+            <p class="text-sm text-gray-500 mt-2 leading-relaxed">
+              {% if entry.details %}{{ entry.details }}{% endif %}
+              {% if entry.thesis %}<em>Thesis: {{ entry.thesis }}</em>{% endif %}
+            </p>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="w-full md:w-1/2 flex flex-col gap-6 justify-center">
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+          <h4 class="font-bold text-navy mb-3 flex items-center gap-2"><i class="fas fa-briefcase text-sage"></i> Work Experience</h4>
+          <div class="space-y-3 text-sm text-gray-600">
+            {% for job in site.data.experience %}
+            <div><span class="font-semibold text-navy">{{ job.title }}</span>, {{ job.employer }} ({{ job.period }})</div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+          <h4 class="font-bold text-navy mb-3 flex items-center gap-2"><i class="fas fa-code text-sage"></i> Technical Skills</h4>
+          <div class="flex flex-wrap gap-2">
+            {% for skill in site.data.skills %}
+            <span class="bg-slate-100 text-slate-700 px-3 py-1 rounded-full text-xs">{{ skill }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESEARCH -->
+<section id="research" class="bg-white py-24">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="flex items-center gap-4 mb-12">
+      <div class="section-icon w-16 h-16 flex items-center justify-center rounded text-sage text-2xl">
+        <i class="fas fa-flask"></i>
+      </div>
+      <h2 class="text-4xl font-bold text-navy">Research.</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      {% for area in site.data.research %}
+      <div class="research-card bg-white p-8 flex flex-col items-center text-center relative group">
+        <i class="{{ area.icon }} text-4xl text-sage-light mb-4"></i>
+        <h4 class="font-bold text-navy mb-2">{{ area.title }}</h4>
+        <p class="text-sm text-gray-500 leading-relaxed">{{ area.description }}</p>
+        <div class="arrow-btn absolute bottom-0 right-0 w-10 h-10 bg-sage flex items-center justify-center text-white transition-colors">
+          <i class="fas fa-chevron-right text-xs"></i>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications" class="bg-slate-50 py-24">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="flex items-center gap-4 mb-12">
+      <div class="section-icon w-16 h-16 flex items-center justify-center rounded-full text-sage text-2xl">
+        <i class="fas fa-file-alt"></i>
+      </div>
+      <h2 class="text-4xl font-bold text-navy">Publications.</h2>
+    </div>
+    <div class="space-y-4">
+
+      <div class="pub-item border border-slate-200 bg-white rounded-2xl p-6 flex gap-6 hover:shadow-lg transition-shadow">
+        <div class="bg-slate-100 rounded-xl w-28 h-24 flex-shrink-0 flex items-center justify-center">
+          <i class="fas fa-database text-3xl text-sage-light"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-navy mb-1"><a href="https://openreview.net/pdf?id=6PsKDjgoEy" target="_blank" rel="noopener" class="hover:text-sage transition-colors">SQALE: A Large Text-to-SQL Corpus Grounded in Real Schemas</a></h4>
+          <p class="text-xs text-gray-400 italic mb-2">AI for Tabular Data Workshop @ NeurIPS 2025 &mdash; Wolff, Gomm &amp; Hulsebos</p>
+          <p class="text-sm text-gray-500 leading-relaxed mb-3">A large-scale semi-synthetic text-to-SQL corpus with 517,676 validated triples grounded in 135,875 real-world database schemas, enabling more realistic training and evaluation of text-to-SQL models.</p>
+          <a href="https://openreview.net/pdf?id=6PsKDjgoEy" target="_blank" rel="noopener" class="text-xs text-sage tracking-widest hover:text-sage-dark">READ THE PAPER &#8599;</a>
+        </div>
+      </div>
+
+      <div class="pub-item border border-slate-200 bg-white rounded-2xl p-6 flex gap-6 hover:shadow-lg transition-shadow">
+        <div class="bg-slate-100 rounded-xl w-28 h-24 flex-shrink-0 flex items-center justify-center">
+          <i class="fas fa-question-circle text-3xl text-sage-light"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-navy mb-1"><a href="https://openreview.net/pdf?id=Mm1CGvmm9Z" target="_blank" rel="noopener" class="hover:text-sage transition-colors">Are We Asking the Right Questions? On Ambiguity in Natural Language Queries for Tabular Data Analysis</a></h4>
+          <p class="text-xs text-gray-400 italic mb-2">AI for Tabular Data Workshop @ NeurIPS 2025 &mdash; Gomm, Wolff &amp; Hulsebos</p>
+          <p class="text-sm text-gray-500 leading-relaxed mb-3">A conceptual framework for characterising ambiguity in natural-language queries over tabular data, arguing for cooperative query specification and analysing 15 common tabular-data benchmarks.</p>
+          <a href="https://openreview.net/pdf?id=Mm1CGvmm9Z" target="_blank" rel="noopener" class="text-xs text-sage tracking-widest hover:text-sage-dark">READ THE PAPER &#8599;</a>
+        </div>
+      </div>
+
+      <div class="pub-item border border-slate-200 bg-white rounded-2xl p-6 flex gap-6 hover:shadow-lg transition-shadow">
+        <div class="bg-slate-100 rounded-xl w-28 h-24 flex-shrink-0 flex items-center justify-center">
+          <i class="fas fa-search text-3xl text-sage-light"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-navy mb-1">MinervAI: Using Generative AI to Assist, Not Replace Humans in Peer Review</h4>
+          <p class="text-xs text-gray-400 italic mb-2">AI in Science (AIS) 2025, Copenhagen &mdash; H&uuml;sing, Petersen, Weiher, Wolff &amp; Musslick</p>
+          <p class="text-sm text-gray-500 leading-relaxed mb-3">A position paper arguing for constrained, verifiable uses of LLMs in peer review, introducing MinervAI &mdash; an open-source tool supporting citation verification and argumentation mapping while preserving human judgment.</p>
+          <a href="https://cdn.prod.website-files.com/68a7113a28bc36a9033775bf/69036138e0acda9ca5180703_40.pdf" target="_blank" rel="noopener" class="text-xs text-sage tracking-widest hover:text-sage-dark">READ THE PAPER &#8599;</a>
+        </div>
+      </div>
+
+      <div class="pub-item border border-slate-200 bg-white rounded-2xl p-6 flex gap-6 hover:shadow-lg transition-shadow">
+        <div class="bg-slate-100 rounded-xl w-28 h-24 flex-shrink-0 flex items-center justify-center">
+          <i class="fas fa-table text-3xl text-sage-light"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-navy mb-1">How well do LLMs reason over tabular data, really?</h4>
+          <p class="text-xs text-gray-400 italic mb-2">4th Table Representation Workshop &ndash; ACL 2025 &mdash; Wolff &amp; Hulsebos</p>
+          <p class="text-sm text-gray-500 leading-relaxed mb-3">A critical examination of LLM reasoning capabilities on tabular data. Identifies flaws in current evaluation methods and proposes an LLM-as-a-judge approach that reveals significant performance deficits under realistic conditions such as missing values and duplicate entities.</p>
+          <a href="https://arxiv.org/pdf/2505.07453" target="_blank" rel="noopener" class="text-xs text-sage tracking-widest hover:text-sage-dark">READ THE PAPER &#8599;</a>
+        </div>
+      </div>
+
+      <div class="pub-item border border-slate-200 bg-white rounded-2xl p-6 flex gap-6 hover:shadow-lg transition-shadow">
+        <div class="bg-slate-100 rounded-xl w-28 h-24 flex-shrink-0 flex items-center justify-center">
+          <i class="fas fa-images text-3xl text-sage-light"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-navy mb-1">PictSure: Pretraining Embeddings Matters for In-Context Learning Image Classifiers</h4>
+          <p class="text-xs text-gray-400 italic mb-2">arXiv preprint, 2025 &mdash; Schiesser, Wolff, Haas &amp; Pukrop</p>
+          <p class="text-sm text-gray-500 leading-relaxed mb-3">Demonstrates the critical importance of pretraining embeddings for in-context learning image classifiers, showing how proper embedding pretraining significantly improves performance and generalization capabilities.</p>
+          <a href="https://arxiv.org/abs/2506.14842" target="_blank" rel="noopener" class="text-xs text-sage tracking-widest hover:text-sage-dark">READ THE PAPER &#8599;</a>
+        </div>
+      </div>
+
+      <div class="pub-item border border-slate-200 bg-white rounded-2xl p-6 flex gap-6 hover:shadow-lg transition-shadow">
+        <div class="bg-slate-100 rounded-xl w-28 h-24 flex-shrink-0 flex items-center justify-center">
+          <i class="fas fa-eye text-3xl text-sage-light"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-navy mb-1">GRASP: A Novel Benchmark for Evaluating Language Grounding and Situated Physics Understanding in Multimodal Language Models</h4>
+          <p class="text-xs text-gray-400 italic mb-2">IJCAI 2024 &mdash; Jassim, Holubar, Richter, Wolff, Ohmer &amp; Bruni</p>
+          <p class="text-sm text-gray-500 leading-relaxed mb-3">Introduces GRASP, a benchmark designed to evaluate language grounding and situated physics understanding in multimodal language models, assessing how well models can understand and reason about physical interactions in visual contexts.</p>
+          <a href="https://doi.org/10.24963/ijcai.2024/696" target="_blank" rel="noopener" class="text-xs text-sage tracking-widest hover:text-sage-dark">READ THE PAPER &#8599;</a>
+        </div>
+      </div>
+
+      <div class="pub-item border border-slate-200 bg-white rounded-2xl p-6 flex gap-6 hover:shadow-lg transition-shadow">
+        <div class="bg-slate-100 rounded-xl w-28 h-24 flex-shrink-0 flex items-center justify-center">
+          <i class="fas fa-comments text-3xl text-sage-light"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-navy mb-1">Bidirectional Emergent Language in Situated Environments</h4>
+          <p class="text-xs text-gray-400 italic mb-2">arXiv preprint, 2024 &mdash; Wolff, Mayer, Bruni &amp; Ohmer</p>
+          <p class="text-sm text-gray-500 leading-relaxed mb-3">Investigates bidirectional emergent language in situated environments, exploring how agents develop communication systems through interaction to facilitate coordination in complex, multi-agent scenarios.</p>
+          <a href="https://arxiv.org/abs/2408.14649" target="_blank" rel="noopener" class="text-xs text-sage tracking-widest hover:text-sage-dark">READ THE PAPER &#8599;</a>
+        </div>
+      </div>
+
+      <div class="pub-item border border-slate-200 bg-white rounded-2xl p-6 flex gap-6 hover:shadow-lg transition-shadow">
+        <div class="bg-slate-100 rounded-xl w-28 h-24 flex-shrink-0 flex items-center justify-center">
+          <i class="fas fa-cogs text-3xl text-sage-light"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-navy mb-1">A Review of Nine Physics Engines for Reinforcement Learning Research</h4>
+          <p class="text-xs text-gray-400 italic mb-2">arXiv preprint, 2024 &mdash; Kaup, Wolff, Hwang, Mayer &amp; Bruni</p>
+          <p class="text-sm text-gray-500 leading-relaxed mb-3">A comprehensive review of nine physics engines commonly used in reinforcement learning research, analyzing their capabilities, performance characteristics, and suitability for various RL applications.</p>
+          <a href="https://arxiv.org/abs/2407.08590" target="_blank" rel="noopener" class="text-xs text-sage tracking-widest hover:text-sage-dark">READ THE PAPER &#8599;</a>
+        </div>
+      </div>
+
+      <div class="pub-item border border-slate-200 bg-white rounded-2xl p-6 flex gap-6 hover:shadow-lg transition-shadow">
+        <div class="bg-slate-100 rounded-xl w-28 h-24 flex-shrink-0 flex items-center justify-center">
+          <i class="fas fa-signal text-3xl text-sage-light"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-navy mb-1">A New Approach on Estimating Germany's Mobile Broadband Coverage based on Crowdsourced Data</h4>
+          <p class="text-xs text-gray-400 italic mb-2">27th ITG-Symposium on Mobile Communication, 2023 &mdash; Wolff, Tessmer &amp; Aschenbruck</p>
+          <p class="text-sm text-gray-500 leading-relaxed mb-3">A novel approach for estimating mobile broadband coverage in Germany using crowdsourced data, providing more accurate and up-to-date coverage information compared to traditional measurement approaches.</p>
+          <a href="https://ieeexplore.ieee.org/document/10345678" target="_blank" rel="noopener" class="text-xs text-sage tracking-widest hover:text-sage-dark">READ THE PAPER &#8599;</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="mt-8 flex justify-center">
+      <button id="pub-show-more" onclick="showMorePubs()" class="inline-flex items-center gap-2 rounded-full border border-sage px-6 py-2 text-xs tracking-[0.2em] text-sage hover:bg-sage hover:text-white transition-colors"></button>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHING & TALKS -->
+<section id="teaching" class="bg-white py-24">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="flex items-center gap-4 mb-10">
+      <div class="section-icon w-16 h-16 flex items-center justify-center rounded-full text-sage text-2xl">
+        <i class="fas fa-book"></i>
+      </div>
+      <h2 class="text-4xl font-bold text-navy">Teaching &amp; Talks.</h2>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex gap-1 border-b border-slate-200 mb-10">
+      <button onclick="switchTab('teaching-tab')" id="tab-teaching-tab" class="tab-btn active px-8 py-3 text-sm text-gray-500 hover:text-navy transition-colors">Teaching</button>
+      <button onclick="switchTab('talks-tab')" id="tab-talks-tab" class="tab-btn px-8 py-3 text-sm text-gray-500 hover:text-navy transition-colors border-b-2 border-transparent">Talks &amp; Presentations</button>
+    </div>
+
+    <div id="content-teaching-tab" class="tab-content active space-y-8">
+      <div class="flex gap-4">
+        <div class="w-4 h-4 bg-sage-light flex-shrink-0 mt-1"></div>
+        <div>
+          <h4 class="font-bold text-navy text-sm mb-1">Emergent Behavior in Multi-Agent Systems (EBIMAS)</h4>
+          <p class="text-xs text-gray-400 italic mb-2">Master's Study Project &mdash; Osnabrück University &middot; July 2022 &ndash; September 2024</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Started and organized a study project providing a platform and course setting for cutting-edge Reinforcement Learning and emergent behavior research. Managed the work of over 20 students at peak times. Implemented various RL models and experiments using OpenAI Gym environments, MuJoCo, and custom multi-agent setups.</p>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="w-4 h-4 bg-sage-light flex-shrink-0 mt-1"></div>
+        <div>
+          <h4 class="font-bold text-navy text-sm mb-1">Study Project: LLMs for Science</h4>
+          <p class="text-xs text-gray-400 italic mb-2">Master's Study Project &mdash; Osnabrück University &middot; 2024</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Managed and organized a study project on "Supporting the Review Process with AI." The AI-driven system automates source validation by verifying citation accuracy against original sources, facilitates literature discovery, and transforms papers into knowledge graphs for structural analysis. Collaborated with IMWI (Prof. Dr. Oliver Thomas) and the Autonomous Empirical Research Group (Sebastian Musslick).</p>
+          <a href="https://study-project-ai-for-science.github.io/landing-page/" target="_blank" rel="noopener" class="text-xs text-sage tracking-widest hover:text-sage-dark mt-2 inline-block">PROJECT WEBSITE &#8599;</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="content-talks-tab" class="tab-content space-y-8">
+      <div class="flex gap-4">
+        <div class="w-4 h-4 bg-sage-light flex-shrink-0 mt-1"></div>
+        <div>
+          <h4 class="font-bold text-navy text-sm mb-1">SQALE: A Large Text-to-SQL Dataset with Realistic Database Schemas</h4>
+          <p class="text-xs text-gray-400 italic mb-2">Seminar Talk &mdash; TRL Seminar, CWI &middot; Amsterdam, Netherlands &middot; January 23, 2026</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Presented SQALE at the TRL Seminar Series at CWI, discussing over 517,000 validated (question, schema, query) triples grounded in 135,000+ real-world relational database schemas. Compared statistical properties to existing benchmarks like Spider 2.0 and BIRD.</p>
+          <a href="https://youtu.be/QIc_aAC7iHc" target="_blank" rel="noopener" class="text-xs text-sage tracking-widest hover:text-sage-dark mt-2 inline-block">WATCH RECORDING &#8599;</a>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="w-4 h-4 bg-sage-light flex-shrink-0 mt-1"></div>
+        <div>
+          <h4 class="font-bold text-navy text-sm mb-1">How well do LLMs reason over tabular data?</h4>
+          <p class="text-xs text-gray-400 italic mb-2">Online Talk &mdash; AlphaXiv &middot; Amsterdam, Netherlands &middot; September 3, 2025</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Presented findings on whether general-purpose LLMs can effectively reason over tabular data, identifying flaws in current evaluation methods and proposing an LLM-as-a-judge approach. Demonstrated how real-world characteristics like missing values and duplicate entities substantially impair LLM tabular reasoning.</p>
+          <a href="https://www.youtube.com/watch?v=jyLM1nsyTxg" target="_blank" rel="noopener" class="text-xs text-sage tracking-widest hover:text-sage-dark mt-2 inline-block">WATCH RECORDING &#8599;</a>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <div class="w-4 h-4 bg-sage-light flex-shrink-0 mt-1"></div>
+        <div>
+          <h4 class="font-bold text-navy text-sm mb-1">Can We Create Green AI?</h4>
+          <p class="text-xs text-gray-400 italic mb-2">Podcast Interview &mdash; Kaleidoscience: Conversations on Cognitive Science &middot; Osnabrück, Germany &middot; December 19, 2024</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Discussed the sustainable use of AI with Sönke Lülf and Elisa Palme, covering the energy footprint of AI models, sustainable data management in companies, the Green-AI Hub Mittelstand initiative, AI pilot projects for SMEs, and open-source solutions for sustainable AI. Episode 12 of the Cognitive Science Student Journal podcast.</p>
+          <a href="https://open.spotify.com/episode/4VStCOSuXf5i7MHxJzIBbQ?si=63c67fa17a034ac0" target="_blank" rel="noopener" class="text-xs text-sage tracking-widest hover:text-sage-dark mt-2 inline-block">LISTEN TO PODCAST &#8599;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="bg-gradient-to-b from-slate-50 to-white py-24">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="flex items-center gap-4 mb-12">
+      <div class="text-sage text-3xl"><i class="fas fa-map-marker-alt"></i></div>
+      <h2 class="text-4xl font-bold text-navy">Contact.</h2>
+    </div>
+    <div>
+      <p class="font-semibold text-navy mb-2">
+        <i class="fas fa-envelope text-sage mr-2"></i>
+        <a href="mailto:cornelius.wolff@cwi.nl" class="hover:text-sage transition-colors">cornelius.wolff@cwi.nl</a>
+      </p>
+      <p class="font-semibold text-navy mb-4">
+        <i class="fas fa-map-marker-alt text-sage mr-2"></i>Amsterdam, The Netherlands
+      </p>
+      <div class="flex gap-2 mb-6">
+        <a href="https://www.linkedin.com/in/co-wolff" target="_blank" rel="noopener" class="w-8 h-8 bg-sage text-white flex items-center justify-center rounded text-xs hover:bg-sage-dark" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://github.com/cowolff" target="_blank" rel="noopener" class="w-8 h-8 bg-sage text-white flex items-center justify-center rounded text-xs hover:bg-sage-dark" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://scholar.google.com/citations?user=Y8xr0JgAAAAJ" target="_blank" rel="noopener" class="w-8 h-8 bg-sage text-white flex items-center justify-center rounded text-xs hover:bg-sage-dark" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+        <a href="https://bsky.app/profile/cowolff.bsky.social" target="_blank" rel="noopener" class="w-8 h-8 bg-sage text-white flex items-center justify-center rounded text-xs hover:bg-sage-dark font-bold" title="Bluesky" style="font-size:10px;">BSky</a>
+        <a href="https://www.researchgate.net/profile/Cornelius-Wolff?ev=hdr_xprf" target="_blank" rel="noopener" class="w-8 h-8 bg-sage text-white flex items-center justify-center rounded text-xs hover:bg-sage-dark" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
+      </div>
+      <p class="text-sm text-gray-500 leading-loose">
+        Centrum Wiskunde &amp; Informatica,<br>
+        Science Park 123,<br>
+        1098 XG Amsterdam,<br>
+        The Netherlands
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+// Publications – show N at a time
+const PUB_PAGE = 5;
+let pubShown = PUB_PAGE;
+
+function initPubs() {
+  const pubs = document.querySelectorAll('.pub-item');
+  pubs.forEach((p, i) => { if (i >= PUB_PAGE) p.style.display = 'none'; });
+  updatePubBtn();
+}
+
+function showMorePubs() {
+  const pubs = document.querySelectorAll('.pub-item');
+  const next = Math.min(pubShown + PUB_PAGE, pubs.length);
+  for (let i = pubShown; i < next; i++) pubs[i].style.display = 'flex';
+  pubShown = next;
+  updatePubBtn();
+}
+
+function updatePubBtn() {
+  const btn = document.getElementById('pub-show-more');
+  const remaining = document.querySelectorAll('.pub-item').length - pubShown;
+  if (remaining <= 0) {
+    btn.parentElement.style.display = 'none';
+  } else {
+    btn.textContent = 'SHOW ' + Math.min(remaining, PUB_PAGE) + ' MORE';
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initPubs);
+
+// Tabs
+function switchTab(tab) {
+  ['teaching-tab','talks-tab'].forEach(t => {
+    document.getElementById('tab-'+t).classList.remove('active');
+    document.getElementById('content-'+t).classList.remove('active');
+  });
+  document.getElementById('tab-'+tab).classList.add('active');
+  document.getElementById('content-'+tab).classList.add('active');
+}
+</script>
+
+<!-- Simple Analytics -->
+<script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+<noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+
+</body>
+</html>
