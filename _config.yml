@@ -137,14 +137,19 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_image                 : "DSCF8580.jpg"  # Social media default site image
+og_description           : "PhD Researcher at CWI & University of Amsterdam, working on Insight Retrieval from Structured Data."
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : Cornelius Wolff
+  links:
+    - "https://www.linkedin.com/in/co-wolff"
+    - "https://github.com/cowolff"
+    - "https://scholar.google.com/citations?user=Y8xr0JgAAAAJ"
+    - "https://bsky.app/profile/cowolff.bsky.social"
+    - "https://www.researchgate.net/profile/Cornelius-Wolff"
 
 
 # Analytics
@@ -254,10 +259,10 @@ defaults:
       path: ""
       type: teaching
     values:
-      layout: single
-      author_profile: true
-      share: true
-      comments: true
+      layout: teaching-detail
+      author_profile: false
+      share: false
+      comments: false
   # _publications
   - scope:
       path: ""
