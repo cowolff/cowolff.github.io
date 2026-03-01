@@ -308,6 +308,7 @@ tailwind.config = {
     <div class="flex gap-1 border-b border-slate-200 mb-10">
       <button onclick="switchTab('teaching-tab')" id="tab-teaching-tab" class="tab-btn active px-8 py-3 text-sm text-gray-500 hover:text-navy transition-colors">Teaching</button>
       <button onclick="switchTab('talks-tab')" id="tab-talks-tab" class="tab-btn px-8 py-3 text-sm text-gray-500 hover:text-navy transition-colors border-b-2 border-transparent">Talks &amp; Presentations</button>
+      <button onclick="switchTab('supervision-tab')" id="tab-supervision-tab" class="tab-btn px-8 py-3 text-sm text-gray-500 hover:text-navy transition-colors border-b-2 border-transparent">Supervision</button>
     </div>
 
     <div id="content-teaching-tab" class="tab-content active space-y-8">
@@ -355,6 +356,25 @@ tailwind.config = {
           {% if media_url contains 'http' %}
           <a href="{{ media_url }}" target="_blank" rel="noopener" class="text-xs text-sage tracking-widest hover:text-sage-dark mt-2 inline-block">WATCH RECORDING &#8599;</a>
           {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div id="content-supervision-tab" class="tab-content space-y-8">
+      {% assign sorted_supervision = site.supervision | sort: 'date' | reverse %}
+      {% for item in sorted_supervision %}
+      <div class="flex gap-4">
+        <div class="w-4 h-4 bg-sage-light flex-shrink-0 mt-1"></div>
+        <div>
+          <h4 class="font-bold text-navy text-sm mb-1">
+            <a href="{{ item.url }}" class="hover:text-sage transition-colors">{{ item.title }}</a>
+          </h4>
+          <p class="text-xs text-gray-400 italic mb-2">
+            {% if item.student %}{{ item.student }}{% endif %}{% if item.type %} &mdash; {{ item.type }}{% endif %}{% if item.venue %} &middot; {{ item.venue }}{% endif %}{% if item.date %} &middot; {{ item.date | date: "%Y" }}{% endif %}
+          </p>
+          {% if item.supervisors %}<p class="text-xs text-gray-400 mb-2">Under {{ item.supervisors }}</p>{% endif %}
+          <a href="{{ item.url }}" class="text-xs text-sage tracking-widest hover:text-sage-dark mt-2 inline-block">VIEW DETAILS &#8599;</a>
         </div>
       </div>
       {% endfor %}
@@ -427,7 +447,7 @@ document.addEventListener('DOMContentLoaded', initPubs);
 
 // Tabs
 function switchTab(tab) {
-  ['teaching-tab','talks-tab'].forEach(t => {
+  ['teaching-tab','talks-tab','supervision-tab'].forEach(t => {
     document.getElementById('tab-'+t).classList.remove('active');
     document.getElementById('content-'+t).classList.remove('active');
   });
